@@ -14,7 +14,8 @@ Because you might not care to look through all the pictures
 
 | Old emojis                        | Not these ugly new emojis         |
 | --------------------------------- | --------------------------------- |
-| ![old emojis](img/old_emojis.bmp | width=20em) | ![new emojis](img/new_emojis.bmp | width=20em) |
+| <img src="img/old_emojis.bmp" style="width:20em"/> | <img src="img/new_emojis.bmp" style="width:20em"/>) |
+
 
 ### It works in facebook.com chat, as well as messenger.com.  
 ![facebook.com](img/facebook_chat.bmp) ![messenger.com](img/messenger_chat.bmp)
