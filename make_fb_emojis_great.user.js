@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Make Facebook Emojis Great Again
-// @namespace    https://www.messenger.com/
+// @namespace    https://github.com/MCWoo/
 // @version      1.1
 // @description  Replaces facebook's new chat emojis with old messenger emojis
 // @author       Matthew Woo
