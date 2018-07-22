@@ -8,7 +8,7 @@ Huzzah!
 
 ## Installation
 Because you might not care to look through all the pictures
-1. Install [Greasemonkey Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) or [Tampermonkey](https://tampermonkey.net/) for other browsers.  
+1. Install [Tampermonkey](https://tampermonkey.net/) browser extension (or [Firefox's Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)).  
   a. These add-ons/extensions allow you to install user scripts which can run Javascript code to customize your browsing experience on various websites.  
   b. **WARNING**: user scripts (also known as Greasemonkey scripts) _can_ be dangerous. Make sure you trust any script you install.  
 2. Install [Make Facebook Emojis Great Again user script](https://github.com/MCWoo/MakeFbEmojisGreatAgain/raw/master/make_fb_emojis_great.user.js).
