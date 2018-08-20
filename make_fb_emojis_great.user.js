@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Make Facebook Emojis Great Again
 // @namespace    https://github.com/MCWoo/
-// @version      1.1
+// @version      1.2
 // @description  Replaces facebook's new chat emojis with old messenger emojis
 // @author       Matthew Woo
 // @downloadURL  https://github.com/MCWoo/MakeFbEmojisGreatAgain/raw/master/make_fb_emojis_great.user.js
@@ -32,13 +32,13 @@
   };
 
   // Translate from the new emoji link to the old emoji link. Currently doesn't take pixel size into account
-  function get_link(new_link) {
+  function get_link(new_link, force_pixels = 0) {
     var match = new_regex.exec(new_link);
     if (match) {
       var code = match[4];
       if (code in code_to_int) {
-        var pixels = match[3]
-          var intermediate = code_to_int[code];
+        var pixels = (force_pixels === 0) ? match[3] : force_pixels;
+        var intermediate = code_to_int[code];
 
         // Default to highest res if we don't have the mapping for some reason
         if (!(pixels in int_to_old)) {
@@ -71,6 +71,18 @@
         for (i = 0; i < inChatEmojis.length; i++) {
           element = inChatEmojis[i];
           link = get_link(element.style.backgroundImage);
+          if (link) {
+            element.style.backgroundImage = 'url("' + link + '")';
+          }
+        }
+
+        // Click and hold down emojis -> creates a growing emoji
+        // Actually not sure if it's the _4a9g or _383m class that distinguishes this, but both only
+        // returned this element
+        var growingEmojis = document.body.getElementsByClassName("_4a9g");
+        for (i = 0; i < growingEmojis.length; i++) {
+          element = growingEmojis[i];
+          link = get_link(element.style.backgroundImage, 128);
           if (link) {
             element.style.backgroundImage = 'url("' + link + '")';
           }
