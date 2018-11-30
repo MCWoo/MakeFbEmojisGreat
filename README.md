@@ -17,7 +17,7 @@ Because you might not care to look through all the pictures
 
 | Old emojis                        | Not these ugly new emojis         |
 | --------------------------------- | --------------------------------- |
-| <img src="img/old_emojis.bmp" width="305" /> | <img src="img/new_emojis.bmp" width="300" /> |
+| <img src="img/emojis_v1.bmp" width="305" /> | <img src="img/emojis_v2.bmp" width="300" /> |
 
 
 ### It works in facebook.com chat, as well as messenger.com.  
@@ -28,3 +28,16 @@ Because you might not care to look through all the pictures
 
 ### I also didn't go past the cat emojis, since the ones I primarily wanted were the smileys.
 <img src="img/limit.bmp" width="300" />
+
+# Updates
+
+## v1.1 - 2018/7/20
+Adds mappings for 16, 32, and 64 pixel images so we're not always using 128x128 pixel images. Reformat (while maintaining readability) to reduce userscript's memory usage.
+
+## v1.2 - 2018/8/20
+Adds support for clicking+holding emojis as they increase in size in chat.
+
+## v1.3 - 2018/11/29
+Adds support for replacing new version of emojis.  
+<img src="img/emojis_v3.bmp" width="305" />
+

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Make Facebook Emojis Great Again
 // @namespace    https://github.com/MCWoo/
-// @version      1.2
+// @version      1.3
 // @description  Replaces facebook's new chat emojis with old messenger emojis
 // @author       Matthew Woo
 // @downloadURL  https://github.com/MCWoo/MakeFbEmojisGreatAgain/raw/master/make_fb_emojis_great.user.js
@@ -14,11 +14,11 @@
   'use strict';
 
   // Regex that matches the new emoji schema
-  // match[1]: the first 1-2 hex digits identifying the emoji
+  // match[1]: the first 1-2 hex digits identifying the emoji (the preceeding f is v2 emojis, t is v3 emojis)
   // match[2]: "version", so far seen 1, 1.5, and 2
   // match[3]: pixel, 16, 32, 64, or 128
   // match[4]: the second 4-5 hex digits identifying the emoji. This correlates roughly across new/old emoji, and pixel sizes
-  var new_regex = /https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v9\/f([\da-f]+)\/([\d\.]+)\/(\d+)\/([\da-f_]+).png/
+  var new_regex = /https:\/\/static.xx.fbcdn.net\/images\/emoji.php\/v9\/[ft]([\da-f]+)\/([\d\.]+)\/(\d+)\/([\da-f_]+).png/
 
     // Translate to an intermediate representation for multiple mappings for different pixel sizes
     var code_to_int = {
